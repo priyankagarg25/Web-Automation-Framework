@@ -7,14 +7,12 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Facebook {
 
 	public static void loginFB(WebDriver driver) throws InterruptedException {
 		Logger logger = Logger.getLogger("Log4j");
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+//		WebDriverWait wait = new WebDriverWait(driver, 20);
 		PropertyConfigurator.configure("C:\\Users\\CP\\workspace\\autotest-framework\\log4j.properties");
 		logger.info("Driver created");
 		WebElement username = driver.findElement(By.xpath("//input[@type='email' and @name='email']"));
