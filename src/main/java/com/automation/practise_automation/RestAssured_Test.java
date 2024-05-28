@@ -16,8 +16,8 @@ public class RestAssured_Test {
 	@Test
 	public void testToEqual() {
 		given().get("https://jsonplaceholder.typicode.com/posts").then()
-				.body("title[2]", Matchers.equalTo("ea molestias quasi exercitationem repellat qui ipsa sit aut"))
-				.log().all();
+				.body("title[2]", Matchers.equalTo("ea molestias quasi exercitationem repellat qui ipsa sit aut")).log()
+				.all();
 	}
 
 }
